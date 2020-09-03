@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand text-white" href="{{ url('/') }}">
+                <a class="navbar-brand text-white" href="{{ url('content') }}">
                     <h2>portfolio</h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -45,7 +45,7 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('登録') }}</a>
+                                    <a class="nav-link text-wite" href="{{ route('register') }}">{{ __('登録') }}</a>
                                 </li>
                             @endif
                         @else
