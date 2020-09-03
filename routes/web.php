@@ -12,10 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('content/index');
+    return view('auth/login');
 });
 
 Route::group(['prefix' => 'content', 'middleware' => 'auth'], function(){
+    Route::get('/', 'ContentController@index')->name('content.index');
     Route::get('create', 'ContentController@create')->name('content.create');
     Route::post('store', 'ContentController@store')->name('content.store');
     Route::get('show/{id}', 'ContentController@show')->name('content.show');
@@ -23,4 +24,4 @@ Route::group(['prefix' => 'content', 'middleware' => 'auth'], function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

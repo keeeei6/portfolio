@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Models\Category;
 use App\User;
+use Illuminate\Support\Facades\Auth;
+
+use Illuminate\Support\Facades\DB;
+
+
 
 class ContentController extends Controller
 {
@@ -15,8 +20,15 @@ class ContentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('content.index');
+    {   
+        $contents = DB::table('categories')
+        ->where('user_id', Auth::id())
+        ->select('month')
+        ->get();
+        
+        
+
+        return view('content.index', compact('contents'));
     }
 
     /**

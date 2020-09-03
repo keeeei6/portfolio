@@ -31,24 +31,14 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach($contents as $content)
                         <tr>
                           <th scope="row"></th>
-                          <td>9月ポートフォリオ</td>
+                          <td>{{ $content->month }}</td>
                           <td>詳細</td>
                           <td>削除</td>
                         </tr>
-                        <tr>
-                          <th scope="row"></th>
-                          <td>10月ポートフォリオ</td>
-                          <td>詳細</td>
-                          <td>削除</td>
-                        </tr>
-                        <tr>
-                          <th scope="row"></th>
-                          <td>11月ポートフォリオ</td>
-                          <td>詳細</td>
-                          <td>削除</td>
-                        </tr>
+                        @endforeach
                       </tbody>
                     </table>
 
