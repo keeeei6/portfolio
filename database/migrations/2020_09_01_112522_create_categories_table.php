@@ -20,7 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->integer('utility')->nullable($value = true);
             $table->integer('credit')->nullable($value = true);
             $table->integer('etc')->nullable($value = true);
-            $table->integer('month');
+            $table->text('month');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
