@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form method="GET" action="/">
+                    <form method="GET" action="{{ route('content.create') }}">
                     <button type="submit" class="btn btn-outline-primary">
                         新規作成
                     </button>

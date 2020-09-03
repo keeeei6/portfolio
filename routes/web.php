@@ -15,12 +15,9 @@ Route::get('/', function () {
     return view('content/index');
 });
 
-Route::get('content/show', function () {
-    return view('content/show');
-});
-
-Route::get('content/create', function () {
-    return view('content/create');
+Route::group(['prefix' => 'content', 'middleware' => 'auth'], function(){
+    Route::get('create', 'ContentController@create')->name('content.create');
+    Route::get('show/{id}', 'ContentController@show')->name('content.show');
 });
 
 Auth::routes();
