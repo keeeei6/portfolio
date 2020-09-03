@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Category;
+use App\User;
+
 class ContentController extends Controller
 {
     /**
@@ -34,7 +37,19 @@ class ContentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $content = new Category;
+
+        $content->income = $request->input('income');
+        $content->rent = $request->input('rent');
+        $content->utility = $request->input('utility');
+        $content->credit = $request->input('credit');
+        $content->etc = $request->input('etc');
+        $content->month = $request->input('month');
+        $content->user_id = $request->user()->id;
+
+        $content->save();
+
+        return redirect('/');
     }
 
     /**

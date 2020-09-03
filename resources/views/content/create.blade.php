@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="/" >
+                    <form method="POST" action="{{ route('content.store') }}" >
                     @csrf
                       <div class="form-group">
                         <label>月</label>
@@ -24,7 +24,7 @@
                       <div class="form-group">
                         <label>収入</label>
                         <br>
-                        <input type="text" name="incom" oninput="value = value.replace(/[^0-9]+/i,'');">
+                        <input type="text" name="income" oninput="value = value.replace(/[^0-9]+/i,'');">
                       </div>
 
                       <div class="form-group">
@@ -50,7 +50,6 @@
                         <br>
                         <input type="text" name="etc" oninput="value = value.replace(/[^0-9]+/i,'');">
                       </div>
-
 
                       <button type="submit" class="btn btn-primary">完了</button>
 
