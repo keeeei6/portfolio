@@ -7,7 +7,7 @@
             <div class="card" >
                 <div class="card-header">入力フォーム</div>
                 <br>
-                <p>※入力欄は半角数字で入力してください</p>
+                <p class="text-danger">※入力欄は半角数字で入力してください</p>
                 <div class="card-body text-center">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -18,12 +18,12 @@
                     <form method="POST" action="{{ route('content.update', ['id' => $content->id ]) }}" >
                     @csrf
                       <div class="form-group">
-                        <label>月</label>
+                        <label>月 <span class="text-danger small"> ※必須</span> </label>
                         <br>
                         <input type="month" name="month" value="{{ $content->month }}">
                       </div>
                       <div class="form-group">
-                        <label>収入</label>
+                        <label>収入 <span class="text-danger small"> ※必須</span> </label>
                         <br>
                         <input type="text" name="income" oninput="value = value.replace(/[^0-9]+/i,'');" value="{{ ($content->income) }}">
                       </div>
