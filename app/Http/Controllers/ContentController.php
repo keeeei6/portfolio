@@ -114,7 +114,18 @@ class ContentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $content = Category::find($id);
+
+        $content->income = $request->input('income');
+        $content->rent = $request->input('rent');
+        $content->utility = $request->input('utility');
+        $content->credit = $request->input('credit');
+        $content->etc = $request->input('etc');
+        $content->month = $request->input('month');
+
+        $content->save();
+
+        return redirect('content');
     }
 
     /**
