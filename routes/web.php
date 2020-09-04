@@ -22,6 +22,7 @@ Route::group(['prefix' => 'content', 'middleware' => 'auth'], function(){
     Route::get('show/{id}', 'ContentController@show')->name('content.show');
     Route::get('edit/{id}', 'ContentController@edit')->name('content.edit');
     Route::post('update/{id}', 'ContentController@update')->name('content.update');
+    Route::post('destroy/{id}', 'ContentController@destroy')->name('content.destroy');
 });
 
 Auth::routes();

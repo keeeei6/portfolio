@@ -5,8 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ $content->month }}</div>
-
+                <div class="card-header">{{ $content->month }} ポートフォリオ</div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -14,11 +13,6 @@
                         </div>
                     @endif
                     
-                    <form method="GET" action="{{ route('content.edit', ['id' => $content->id ]) }}">
-                    <button type="submit" class="btn btn-outline-primary">
-                        編集
-                    </button>
-                    </form>
                     <br>
                     <table class="table">
                       <thead class="thead-dark">
@@ -65,6 +59,7 @@
                           <th>¥ {{ number_format($content->etc) }} </th>
                         </tr>
                       </thead>
+                      <tbody>
                         <tr>
                           <th scope="row">自由に使えるお金 <br> (WANTS)</th>
                           <td></td>
@@ -78,15 +73,23 @@
                         </tr>
                       </tbody>
                     </table>
+                  </div>
                 </div>
-            </div>
-            <br>
-            <br>
-            <div class="progress" style="height: 50px;">
-              <div class="progress-bar" role="progressbar" style="width: <?php echo $cost_proportion;?>% " aria-valuemin="0" aria-valuemax="100">NEEDS <?php echo $cost_proportion;?>%</div>
-              <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo $wants_proportion;?>% " aria-valuemin="0" aria-valuemax="100">WANTS <?php echo $wants_proportion;?>%</div>
-              <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $saving_proportion;?>%" aria-valuemin="0" aria-valuemax="100">SAVING <?php echo $saving_proportion;?>%</div>
-            </div>
+                <br>
+                <br>
+                <div class="progress" style="height: 50px;">
+                  <div class="progress-bar" role="progressbar" style="width: <?php echo $cost_proportion;?>% " aria-valuemin="0" aria-valuemax="100">NEEDS <?php echo $cost_proportion;?>%</div>
+                  <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo $wants_proportion;?>% " aria-valuemin="0" aria-valuemax="100">WANTS <?php echo $wants_proportion;?>%</div>
+                  <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $saving_proportion;?>%" aria-valuemin="0" aria-valuemax="100">SAVING <?php echo $saving_proportion;?>%</div>
+                </div>
+                <br><br>
+                <div class="row justify-content-center">
+                  <form method="GET" action="{{ route('content.edit', ['id' => $content->id ]) }}">
+                  <button type="submit" class="btn btn-primary ">
+                      入力データを編集する
+                  </button>
+                  </form>
+                </div>
         </div>
     </div>
 </div>
