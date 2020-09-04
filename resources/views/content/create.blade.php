@@ -6,7 +6,8 @@
         <div class="col-md-8">
             <div class="card" >
                 <div class="card-header">入力フォーム</div>
-
+                <br>
+                <p>※入力欄は半角数字で入力してください</p>
                 <div class="card-body text-center">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -21,6 +22,7 @@
                         <br>
                         <input type="month" name="month">
                       </div>
+
                       <div class="form-group">
                         <label>収入</label>
                         <br>
@@ -50,8 +52,8 @@
                         <br>
                         <input type="text" name="etc" oninput="value = value.replace(/[^0-9]+/i,'');">
                       </div>
-
-                      <button type="submit" class="btn btn-primary">完了</button>
+                      <br><br>
+                      <button type="submit" class="btn btn-primary">ポートフォリオを作成する</button>
 
                     </form>
                 </div>
