@@ -20,6 +20,7 @@ Route::group(['prefix' => 'content', 'middleware' => 'auth'], function(){
     Route::get('create', 'ContentController@create')->name('content.create');
     Route::post('store', 'ContentController@store')->name('content.store');
     Route::get('show/{id}', 'ContentController@show')->name('content.show');
+    Route::get('edit/{id}', 'ContentController@edit')->name('content.edit');
 });
 
 Auth::routes();

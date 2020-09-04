@@ -35,7 +35,7 @@
                         <tr>
                           <th scope="row"></th>
                           <td>{{ $content->month }}</td>
-                          <td>詳細</td>
+                          <td><a href="{{ route('content.show', ['id' => $content->id ]) }}">詳細</a></td>
                           <td>削除</td>
                         </tr>
                         @endforeach
