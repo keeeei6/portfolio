@@ -24,6 +24,7 @@ class ContentController extends Controller
         $contents = DB::table('categories')
         ->where('user_id', Auth::id())
         ->select('id','month')
+        ->orderBy('month', 'asc')
         ->get();
         
         
