@@ -1,78 +1,109 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+## アプリ名
+- portforio (お金の管理ポートフォリオ)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+<br>
 
-## About Laravel
+## 概要 
+- 内容<br>
+１ヶ月のお金の管理ができるシステムを開発しました。<br>
+収入と支出を入力することで、１ヶ月の自由に使える金額と貯金金額を割合に基づいて自動で計算し、ポートフォリオを作成します。<br>
+○固定の支出：自由に使える金額：貯金金額 = 5:3:2 に近くなるようにプログラミングしています。<br>
+固定の支出の入力により比率は変わってきます。<br>
+<br>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- 機能
+○ユーザー登録  ○ログインログアウト  ○金額の入力、保存 <br>
+○プログラムによる計算  ○１ヶ月のポートフォリオ作成  ○編集機能　○削除機能 <br>
+<br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 本番環境
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- URL：
+- テストアカウント <br>
 
-## Learning Laravel
+ID (Email)： <br>
+password： <br>
+<br>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<br>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## 作成背景
+将来に向けて、お金の管理を見えるかして計画的に運用していく為に作成しました。<br>
+１ヶ月が終わり振り返ると計画と支出の誤差があるという人が多く、<br>
+そのようなことがないように計画をしっかりと立てることができ、尚且つ簡単に管理ができる物を作成したいと思いました。<br>
+貯金はしたいが、なかなかできないという人に活用してもらえるようなアプリになっています。<br>
+<br>
+<br>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 開発環境
+- HTML
+- Bootstrap
+- PHP/ Laravel
+- MySQL
+- Github
+- heroku
+- Visual Studio Code
+<br>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+## 工夫ポイント
 
-## Contributing
+- 入力を元に自動で計算ができ、ポートフォリオを作成できるように実装した。
+- Bootstrapを活用し、レイアウトをシンプルで見やすくした。また棒グラフでわかりやすくした。
+<br>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 今後実装したい機能
+- 結果を入力して比較できるシステムを追加したい
+<br>
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## データベース設計
+<br>
 
-## Security Vulnerabilities
+## categoryテーブル
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+|Column|Type|Options|
+|------|----|-------|
+|income|integer|reqired|
+|rent|integer|nullable|
+|utility|integer|nullable|
+|credit|integer|nullable|
+|etc|integer|nullable|
+|month|text|reqired|
+|user_id|unsignedBigIntege|reqired|
 
-## License
+### Association
+- bilongsTo('App\user')
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## userテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|
+|email|string|unique|
+|password|string|
+|created_at|
+|update_at|
+
+### Association
+- has_many :categories
+
+
+
+
+<br>
+<br>
+
+## APPイメージ画像
+<br>
+
+!
+
+<br>
+
+!
+
+<br>
+
+!
