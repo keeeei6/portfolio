@@ -98,7 +98,7 @@ password： pass1122<br>
 ## APPイメージ画像
 <br>
 
-![TOPページ]portfolio1.jpg
+![ファイル選択](portfolio.jpg)
 
 <br>
 
