@@ -28,8 +28,6 @@ class ContentController extends Controller
         ->orderBy('month', 'asc')
         ->get();
         
-        
-
         return view('content.index', compact('contents'));
     }
 
