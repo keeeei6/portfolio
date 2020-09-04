@@ -136,6 +136,9 @@ class ContentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $content = Category::find($id);
+        $content->delete();
+
+        return redirect('content');
     }
 }

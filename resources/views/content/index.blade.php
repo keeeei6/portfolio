@@ -35,8 +35,13 @@
                         <tr>
                           <th scope="row"></th>
                           <td>{{ $content->month }}</td>
-                          <td><a href="{{ route('content.show', ['id' => $content->id ]) }}">詳細</a></td>
-                          <td>削除</td>
+                          <td><a href="{{ route('content.show', ['id' => $content->id ]) }}">ポートフォリオ</a></td>
+                          <td>
+                            <form method="POST" action="{{ route('content.destroy', ['id' => $content->id ]) }}" id="delete_{{ $content->id }}" >
+                            @csrf
+                            <a href="#" data-id="{{ $content->id }}" onclick="deletePost(this);">削除する</a>
+                            </form>
+                          </td>
                         </tr>
                         @endforeach
                       </tbody>
@@ -47,4 +52,16 @@
         </div>
     </div>
 </div>
+
+<script>
+
+function deletePost(e){
+    'use strict';
+    if (confirm('本当に削除してよろしいですか？')) {
+    document.getElementById('delete_' + e.dataset.id).submit();
+    }
+}
+
+</script>
+
 @endsection
