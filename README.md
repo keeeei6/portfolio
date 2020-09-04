@@ -107,5 +107,5 @@ password： pass1122<br>
 <br>
 
 
-![入力画面](portfolio3.jpg)
+![ポートフォリオ](portforio3.jpg)
 
