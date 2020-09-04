@@ -76,9 +76,9 @@
                   </div>
                 </div>
                 <br>
-                <br>
+                <br><br>
                 <div class="progress" style="height: 50px;">
-                  <div class="progress-bar" role="progressbar" style="width: <?php echo $cost_proportion;?>% " aria-valuemin="0" aria-valuemax="100">NEEDS <?php echo $cost_proportion;?>%</div>
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo $cost_proportion;?>% " aria-valuemin="0" aria-valuemax="100">NEEDS <?php echo $cost_proportion;?>%</div>
                   <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo $wants_proportion;?>% " aria-valuemin="0" aria-valuemax="100">WANTS <?php echo $wants_proportion;?>%</div>
                   <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $saving_proportion;?>%" aria-valuemin="0" aria-valuemax="100">SAVING <?php echo $saving_proportion;?>%</div>
                 </div>
