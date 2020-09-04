@@ -18,11 +18,11 @@
 
 ## 本番環境
 
-- URL：
+- URL： https://safe-mesa-02613.herokuapp.com/
 - テストアカウント <br>
 
-ID (Email)： <br>
-password： <br>
+ID (Email)： test@test.com<br>
+password： pass1122<br>
 <br>
 
 <br>
